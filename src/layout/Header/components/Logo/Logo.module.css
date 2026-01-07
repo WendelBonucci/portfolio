@@ -1,0 +1,40 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 250px;
+}
+
+.dimensionImage {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dimensionImage img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo:hover {
+  opacity: 0.85;
+  transition: opacity 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .dimensionImage {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dimensionImage {
+    width: 70px;
+    height: 70px;
+  }
+}

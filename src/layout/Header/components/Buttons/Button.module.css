@@ -1,0 +1,26 @@
+.contentBtn {
+    width: 250px;
+}
+
+.listBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.linkBtn {
+    background-color: var(--collor-white);
+    padding: 7px;
+    border-radius: 10px;
+    color: var(--collor-primary-black);
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.5s ease;
+}
+
+.linkBtn:hover {
+    background-color: var(--collor-gray);
+    color: var(--collor-white);
+}

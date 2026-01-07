@@ -1,0 +1,38 @@
+.Navgation {
+    width: 600px;
+
+    .listNav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        gap: 2rem;
+    }
+}
+
+.linkNav {
+    text-decoration: none;
+    font-size: 17px;
+    color: var(--collor-white);
+    transition: 0.5s;
+    position: relative;
+}
+
+.linkNav:hover {
+    color: var(--collor-gray);
+}
+
+.linkNav::after {
+    content: '';
+    bottom: 0%;
+    left: 0%;
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    background-color: var(--collor-blue);
+    transition: 0.7s ease;
+}
+
+.linkNav:hover::after {
+    width: 100%;
+}

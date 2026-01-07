@@ -1,0 +1,16 @@
+.Header {
+    width: 100%;
+    height: auto;
+    min-height: 80px; 
+    padding: 0px 4%;
+    position: fixed;
+    z-index: 999;
+    top: 0%;
+    background-color: var(--collor-primary-black);
+
+    .contentHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
