@@ -17,4 +17,7 @@
   --collor-white: #fdfdfd;
   --collor-blue: #79C4F2;
   --collor-grandient-gray: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --collor-grandient-black: linear-gradient(135deg, #0a0a0a 0%, #363636 100%);
+  --collor-grandient-blue: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+  --collor-grandient-red:  linear-gradient(135deg, #faf9f9 0%, #f0efef 100%);
 }

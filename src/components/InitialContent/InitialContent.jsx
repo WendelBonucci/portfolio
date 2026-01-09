@@ -24,7 +24,7 @@ export default function InitialContent() {
                 <div className={styles.descritionContent}>
                     <h1 className={styles.titleInitial}>Olá, prazer me chamo Wendell Bonucci</h1>
                     <p className={styles.paragrafInitial}>Sou Engenheiro de Software</p>
-                    <Link className={styles.linkInitial} href='/about'>Saiba Mais</Link>
+                    <Link className={styles.linkInitial} href='#about'>Saiba Mais</Link>
                 </div>
             </section>
         </section>
