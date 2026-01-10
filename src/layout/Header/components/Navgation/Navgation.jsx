@@ -9,7 +9,7 @@ export default function Navgation() {
         { name: 'Sobre', href: '#about', },
         { name: 'Habilidades', href: '#skill', },
         { name: 'Jornada', href: '#journey', },
-        { name: 'Projetos', href: '/', },
+        { name: 'Projetos', href: '#projects', },
     ]
 
     return (
