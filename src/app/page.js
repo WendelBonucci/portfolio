@@ -4,6 +4,7 @@ import InitialContent from "@/components/InitialContent/InitialContent";
 import Title from "@/utils/Title/Title";
 import About from "@/components/About/About";
 import Skills from "@/components/Skills/Skills";
+import Journey from "@/components/Journey/Journey";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <InitialContent />
       <About />
       <Skills />
+      <Journey />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Button() {
     const dt_buttons = [
         { name: 'Contato', href: '/contact' },
-        { name: 'Trabalhos', href: '/work' },
+       /*  { name: 'Trabalhos', href: '/work' }, */
     ]
 
     return (

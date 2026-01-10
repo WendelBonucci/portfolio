@@ -6,9 +6,9 @@ import Link from 'next/link'
 export default function Navgation() {
     const dt_links = [
         { name: 'Home', href: '/', },
-        { name: 'Sobre', href: '/', },
-        { name: 'Habilidades', href: '/', },
-        { name: 'Jornada', href: '/', },
+        { name: 'Sobre', href: '#about', },
+        { name: 'Habilidades', href: '#skill', },
+        { name: 'Jornada', href: '#journey', },
         { name: 'Projetos', href: '/', },
     ]
 

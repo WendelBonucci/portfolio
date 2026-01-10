@@ -11,16 +11,18 @@
 }
 
 .linkBtn {
-    background-color: var(--collor-white);
+    background-color: transparent;
     padding: 7px;
     border-radius: 10px;
-    color: var(--collor-primary-black);
+    border: 1px solid var(--collor-blue);
+    color: var(--collor-blue);
     text-decoration: none;
     font-size: 17px;
-    transition: 0.5s ease;
+    transition: color 0.4s ease;
+    position: relative;
 }
 
 .linkBtn:hover {
-    background-color: var(--collor-gray);
+    background-color: var(--collor-grandient-blue);
     color: var(--collor-white);
 }
