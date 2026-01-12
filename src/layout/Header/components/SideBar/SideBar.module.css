@@ -1,0 +1,337 @@
+.sectionSideBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+/* Botão Hamburguer */
+.Menu {
+    position: fixed;
+    top: 30px;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(20, 20, 20, 0.9) 100%);
+    border: 2px solid rgba(121, 196, 242, 0.3);
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0;
+    z-index: 10001;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow:
+        0 0 20px rgba(121, 196, 242, 0.2),
+        0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.Menu:hover {
+    border-color: var(--collor-blue);
+    transform: scale(1.05);
+    box-shadow:
+        0 0 30px rgba(121, 196, 242, 0.4),
+        0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.Menu span {
+    width: 25px;
+    height: 2.5px;
+    background: var(--collor-blue);
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px rgba(121, 196, 242, 0.5);
+}
+
+.Menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.Menu.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.Menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.Menu.active {
+    border-color: var(--collor-blue);
+    background: linear-gradient(135deg, rgba(121, 196, 242, 0.15) 0%, rgba(26, 26, 26, 0.95) 100%);
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 9998;
+}
+
+.overlayActive {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Sidebar Container */
+.containerSideBar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 380px;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(13, 13, 13, 0.98) 0%, rgba(20, 20, 20, 0.98) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(121, 196, 242, 0.2);
+    box-shadow:
+        -5px 0 40px rgba(0, 0, 0, 0.6),
+        -2px 0 20px rgba(121, 196, 242, 0.1);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.containerSideBar.openBox {
+    right: 0;
+}
+
+/* Scrollbar customizada */
+.containerSideBar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.containerSideBar::-webkit-scrollbar-track {
+    background: rgba(13, 13, 13, 0.5);
+}
+
+.containerSideBar::-webkit-scrollbar-thumb {
+    background: rgba(121, 196, 242, 0.3);
+    border-radius: 3px;
+}
+
+.containerSideBar::-webkit-scrollbar-thumb:hover {
+    background: rgba(121, 196, 242, 0.5);
+}
+
+/* Header da Sidebar */
+.sidebarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 25px;
+    border-bottom: 1px solid rgba(121, 196, 242, 0.15);
+}
+
+.sidebarTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, var(--collor-white) 0%, var(--collor-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.closeButton {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(121, 196, 242, 0.1);
+    border: 1px solid rgba(121, 196, 242, 0.3);
+    border-radius: 10px;
+    color: var(--collor-blue);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.closeButton:hover {
+    background: rgba(121, 196, 242, 0.2);
+    border-color: var(--collor-blue);
+    transform: rotate(90deg);
+}
+
+/* Navigation */
+.contentNav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    gap: 8px;
+}
+
+.navLink {
+    display: block;
+    padding: 18px 30px;
+    text-decoration: none;
+    color: var(--collor-gray);
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.navLink::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--collor-blue);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.navLink:hover::before {
+    transform: translateX(0);
+}
+
+.navLink:hover {
+    color: var(--collor-white);
+    background: rgba(121, 196, 242, 0.08);
+    padding-left: 40px;
+    transform: translateX(5px);
+}
+
+.sidebarFooter {
+    padding: 25px 30px 30px;
+    border-top: 1px solid rgba(121, 196, 242, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebarFooter p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--collor-white);
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+.sidebarFooter span {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--collor-gray);
+    letter-spacing: 0.3px;
+}
+
+.containerSideBar.openBox .sidebarHeader {
+    animation: slideInRight 0.4s ease-out 0.1s both;
+}
+
+.containerSideBar.openBox .navLink {
+    animation: slideInRight 0.4s ease-out both;
+}
+
+.containerSideBar.openBox .navLink:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.containerSideBar.openBox .navLink:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.containerSideBar.openBox .navLink:nth-child(3) {
+    animation-delay: 0.25s;
+}
+
+.containerSideBar.openBox .navLink:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.containerSideBar.openBox .navLink:nth-child(5) {
+    animation-delay: 0.35s;
+}
+
+.containerSideBar.openBox .navLink:nth-child(6) {
+    animation-delay: 0.4s;
+}
+
+.containerSideBar.openBox .sidebarFooter {
+    animation: slideInRight 0.4s ease-out 0.45s both;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .containerSideBar {
+        width: 100%;
+        right: -100%;
+    }
+
+    .Menu {
+        top: 25px;
+        right: 4%;
+        width: 45px;
+        height: 45px;
+    }
+
+    .Menu span {
+        width: 22px;
+    }
+
+    .sidebarHeader {
+        padding: 25px 25px 20px;
+    }
+
+    .sidebarTitle {
+        font-size: 1.3rem;
+    }
+
+    .closeButton {
+        width: 36px;
+        height: 36px;
+        font-size: 1.3rem;
+    }
+
+    .contentNav {
+        padding: 30px 0;
+    }
+
+    .navLink {
+        padding: 16px 25px;
+        font-size: 1.05rem;
+    }
+
+    .navLink:hover {
+        padding-left: 35px;
+    }
+
+    .sidebarFooter {
+        padding: 20px 25px 25px;
+    }
+}

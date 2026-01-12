@@ -36,3 +36,9 @@
 .linkNav:hover::after {
     width: 100%;
 }
+
+@media (max-width: 748px) {
+    .Navgation {
+        display: none;
+    }
+}

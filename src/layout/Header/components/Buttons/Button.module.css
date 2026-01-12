@@ -26,3 +26,9 @@
     background-color: var(--collor-grandient-blue);
     color: var(--collor-white);
 }
+
+@media (max-width: 748px) {
+    .contentBtn {
+        display: none;
+    }
+}
