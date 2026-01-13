@@ -263,9 +263,9 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 748px) {
     .InitialContent {
-        padding: 180px 5%;
+        padding: 200px 5%;
     }
 
     .titleInitial {
@@ -277,8 +277,8 @@
     }
 
     .image {
-        width: 260px;
-        height: 260px;
+        width: 200px;
+        height: 200px;
     }
 
     .contentImage::before {
