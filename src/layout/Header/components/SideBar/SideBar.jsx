@@ -3,7 +3,7 @@ import { useEffect, useState, useCallback, useRef } from 'react'
 import styles from './SideBar.module.css'
 import Link from 'next/link'
 import { FiX } from 'react-icons/fi'
-
+ 
 export default function SideBar() {
     const [isOpen, setIsOpen] = useState(false)
     const sidebarRef = useRef(null)

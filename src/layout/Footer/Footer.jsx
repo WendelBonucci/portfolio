@@ -14,12 +14,12 @@ const SOCIAL_LINKS = [
     { name: "Instagram", href: "https://www.instagram.com/srrwende.ll/", external: true },
     { name: "LinkedIn", href: "https://www.linkedin.com/in/wendell-bonucci-8b2aa237a/", external: true },
     { name: "GitHub", href: "https://github.com/WendelBonucci", external: true },
-    { name: "NextSolve", href: "/comunity" },
+    { name: "NextSolve", href: "/community" },
 ];
 
 const INSTITUTIONAL_LINKS = [
     { name: "Política de Privacidade", href: "/privacidade" },
-    { name: "Comunidade - Tecnologia", href: "/comunity" },
+    { name: "Comunidade - Tecnologia", href: "/community" },
 ];
 
 function FooterLinks({ title, links }) {
@@ -33,8 +33,7 @@ function FooterLinks({ title, links }) {
                             href={link.href}
                             className={styles.link}
                             target={link.external ? "_blank" : undefined}
-                            rel={link.external ? "noopener noreferrer" : undefined}
-                        >
+                            rel={link.external ? "noopener noreferrer" : undefined}>
                             {link.name}
                         </Link>
                     </li>
