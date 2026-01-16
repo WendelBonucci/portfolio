@@ -79,7 +79,7 @@ export default function About() {
                     </div>
                     <div className={styles.socialAbout}>
                         {aboutSocial.map((social, index) => (
-                            <ul className={styles.listSocial}>
+                            <ul className={styles.listSocial} key={index}>
                                 <li key={index}>
                                     <Link href={social.href} className={styles.linkSocial} target="_blank">{social.icon}</Link>
                                 </li>

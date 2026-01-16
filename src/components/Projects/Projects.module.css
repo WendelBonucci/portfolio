@@ -1,0 +1,334 @@
+.sectionProjects {
+  width: 100%;
+  padding: 100px 5%;
+  background: var(--collor-primary-black);
+}
+
+.containerProjects {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.projectsTitle {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 15px 0;
+  
+  background: linear-gradient(135deg, var(--collor-white) 0%, var(--collor-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.projectsSubtitle {
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--collor-gray);
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+
+.contentCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.cardProject {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(20, 20, 20, 0.8) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(121, 196, 242, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.cardProject:hover {
+  transform: translateY(-8px);
+  border-color: rgba(121, 196, 242, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.cardImage {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(13, 13, 13, 0.8);
+}
+
+.projectImage {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cardProject:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 0%, rgba(13, 13, 13, 0.8) 100%);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.cardProject:hover .imageOverlay {
+  opacity: 0.3;
+}
+
+.cardContent {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--collor-white);
+  margin: 0;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--collor-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.techTag {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--collor-blue);
+  background: rgba(121, 196, 242, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(121, 196, 242, 0.3);
+}
+
+.viewButton {
+  padding: 14px 30px;
+  background: transparent;
+  color: var(--collor-blue);
+  border: 2px solid var(--collor-blue);
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  font-family: inherit;
+}
+
+.viewButton:hover {
+  background: var(--collor-blue);
+  color: var(--collor-primary-black);
+  transform: translateY(-2px);
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 9998;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.98) 0%, rgba(20, 20, 20, 0.98) 100%);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(121, 196, 242, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  
+  z-index: 9999;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(121, 196, 242, 0.1);
+  border: 1px solid rgba(121, 196, 242, 0.3);
+  border-radius: 50%;
+  color: var(--collor-blue);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.closeButton:hover {
+  background: rgba(121, 196, 242, 0.2);
+  transform: rotate(90deg);
+}
+
+.modalTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--collor-white);
+  margin: 0;
+  padding-right: 40px;
+}
+
+.modalDescription {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--collor-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.modalButtons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.modalButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  
+  background: transparent;
+  color: var(--collor-blue);
+  text-decoration: none;
+  
+  border: 2px solid var(--collor-blue);
+  border-radius: 50px;
+  
+  font-size: 0.95rem;
+  font-weight: 600;
+  
+  transition: all 0.3s ease;
+}
+
+.modalButton:hover {
+  background: var(--collor-blue);
+  color: var(--collor-primary-black);
+  transform: translateY(-2px);
+}
+
+.modalButton.primary {
+  background: var(--collor-blue);
+  color: var(--collor-primary-black);
+}
+
+.modalButton.primary:hover {
+  background: transparent;
+  color: var(--collor-blue);
+}
+
+@media (max-width: 768px) {
+  .sectionProjects {
+    padding: 80px 4%;
+  }
+
+  .projectsTitle {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 12px;
+  }
+
+  .projectsSubtitle {
+    font-size: 1.05rem;
+    margin-bottom: 50px;
+  }
+
+  .contentCards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cardContent {
+    padding: 25px;
+  }
+
+  .modal {
+    padding: 35px 25px;
+    max-width: 90%;
+  }
+
+  .modalButtons {
+    flex-direction: column;
+  }
+
+  .modalButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionProjects {
+    padding: 60px 4%;
+  }
+
+  .cardImage {
+    height: 200px;
+  }
+
+  .cardContent {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .cardTitle {
+    font-size: 1.3rem;
+  }
+
+  .cardDescription {
+    font-size: 0.95rem;
+  }
+
+  .modal {
+    padding: 30px 20px;
+  }
+
+  .modalTitle {
+    font-size: 1.5rem;
+  }
+
+  .closeButton {
+    top: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+  }
+}

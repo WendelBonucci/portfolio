@@ -7,9 +7,9 @@ export default function Navgation() {
     const dt_links = [
         { name: 'Home', href: '/', },
         { name: 'Sobre', href: '#about', },
+        { name: 'Projetos', href: '#project', },
         { name: 'Habilidades', href: '#skill', },
         { name: 'Jornada', href: '#journey', },
-        { name: 'Projetos', href: '#projects', },
     ]
 
     return (
