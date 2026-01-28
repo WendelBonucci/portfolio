@@ -18,7 +18,7 @@
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at 20% 50%, rgba(121, 196, 242, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(121, 196, 242, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 80% 80%, rgba(121, 196, 242, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -53,10 +53,13 @@
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 0.5;
     }
+
     50% {
         transform: scale(1.1);
         opacity: 0.8;
@@ -71,7 +74,7 @@
     border: 3px solid var(--collor-blue);
     position: relative;
     overflow: hidden;
-    box-shadow: 
+    box-shadow:
         0 0 30px rgba(121, 196, 242, 0.3),
         0 20px 60px rgba(0, 0, 0, 0.6),
         inset 0 0 40px rgba(121, 196, 242, 0.1);
@@ -98,7 +101,7 @@
 
 .image:hover {
     transform: scale(1.05) translateY(-5px);
-    box-shadow: 
+    box-shadow:
         0 0 40px rgba(121, 196, 242, 0.5),
         0 25px 70px rgba(0, 0, 0, 0.7),
         inset 0 0 50px rgba(121, 196, 242, 0.15);
@@ -146,6 +149,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -213,7 +217,7 @@
 .linkInitial:hover {
     color: var(--collor-primary-black);
     transform: translateY(-3px);
-    box-shadow: 
+    box-shadow:
         0 10px 30px rgba(121, 196, 242, 0.4),
         0 0 20px rgba(121, 196, 242, 0.2);
     border-color: var(--collor-blue);
@@ -258,14 +262,19 @@
     }
 
     .contentImage::before {
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 300px;
     }
 }
 
 @media (max-width: 748px) {
     .InitialContent {
         padding: 200px 5%;
+    }
+
+    .imageDev {
+        width: 200px;
+        height: 200px;
     }
 
     .titleInitial {
@@ -295,6 +304,11 @@
 @media (max-width: 480px) {
     .InitialContent {
         padding: 140px 5%;
+    }
+
+    .imageDev {
+        width: 200px;
+        height: 200px;
     }
 
     .divisionContent {
