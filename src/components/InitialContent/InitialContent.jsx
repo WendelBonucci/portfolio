@@ -11,7 +11,7 @@ export default function InitialContent() {
                 <div className={styles.contentImage}>
                     <div className={styles.image}>
                         <Image
-                            src="/dev.jpeg"
+                            src="/wbb.jpeg"
                             alt="Logo WB"
                             width={350}
                             height={350}

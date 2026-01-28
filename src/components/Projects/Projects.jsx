@@ -109,7 +109,7 @@ export default function Projects() {
                                         <span key={index} className={styles.techTag}>{tech}</span>
                                     ))}
                                 </div>
-
+                            
                                 <button
                                     className={styles.viewButton}
                                     onClick={() => openProjectModal(project.id)}
