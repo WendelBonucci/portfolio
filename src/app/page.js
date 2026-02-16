@@ -12,7 +12,7 @@ export default function Home() {
     <div className={styles.page}>
       <InitialContent />
       <About />
-      {/* <Projects /> */}
+      <Projects />
       <Skills />
       <Journey />
     </div>

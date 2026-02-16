@@ -49,21 +49,6 @@
     border-radius: 50%;
     filter: blur(60px);
     z-index: 0;
-    animation: pulse 4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 0.5;
-    }
-
-    50% {
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
 }
 
 .image {
@@ -109,13 +94,6 @@
 
 .image:hover::before {
     opacity: 1;
-    animation: rotate 3s linear infinite;
-}
-
-@keyframes rotate {
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 .imageDev {
@@ -141,19 +119,6 @@
     background-clip: text;
     letter-spacing: -0.5px;
     position: relative;
-    animation: fadeInUp 0.8s ease-out;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .paragrafInitial {

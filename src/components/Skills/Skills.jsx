@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import { useEffect } from 'react'
 import styles from './Skills.module.css'
 import { DiJavascript1 } from "react-icons/di";
 import { FaReact, FaWordpress } from "react-icons/fa";
@@ -6,8 +7,18 @@ import { FaPython } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiNextdotjs } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 export default function Skills() {
+    useEffect(() => {
+        Aos.init({
+            duration: 700,
+            easing: 'ease-in-out',
+            once: true,
+        })
+    })
+
     const cards = [
         {
             title: 'Javascript',
@@ -44,8 +55,8 @@ export default function Skills() {
     return (
         <section className={styles.contentSkills} id="skill">
             <section className={styles.sectionTop}>
-                <h2 className={styles.titleSkil}>Minhas Skills</h2>
-                <p className={styles.paragrafSkil}>Tecnologias e soluções que utilizo no dia a dia</p>
+                <h2 className={styles.titleSkil} data-aos="fade-up" data-aos-delay={100}>Minhas Skills</h2>
+                <p className={styles.paragrafSkil} data-aos="fade-up" data-aos-delay={100}>Tecnologias e soluções que utilizo no dia a dia</p>
             </section>
 
             <div className={styles.grid}>

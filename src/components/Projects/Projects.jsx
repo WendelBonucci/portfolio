@@ -41,44 +41,44 @@ export default function Projects() {
         },
         {
             id: 3,
-            title: 'Site NextSolve',
-            image: '/webNext.png',
+            title: 'Consultoria Online - Lare Sampaio',
+            image: '/consProj.png',
             text: 'Site desenvolvido para empresa NextSolve',
-            href: 'https://nextsolve.vercel.app/',
+            href: 'https://consultoria-ls.vercel.app/',
             tec: ['Next.js', 'Css Modules'],
-            github: 'https://github.com/WendelBonucci/Nextsolve-Studio-Vision/tree/main/src/app',
-            demo: 'https://nextsolve.vercel.app/',
+            github: 'https://github.com/WendelBonucci/consultoria/tree/main/src',
+            demo: 'https://consultoria-ls.vercel.app/',
         },
-        {
-            id: 4,
-            title: 'Site NextSolve',
-            image: '/webNext.png',
-            text: 'Site desenvolvido para empresa NextSolve',
-            href: 'https://nextsolve.vercel.app/',
-            tec: ['Next.js', 'Css Modules'],
-            github: 'https://github.com/WendelBonucci/Nextsolve-Studio-Vision/tree/main/src/app',
-            demo: 'https://nextsolve.vercel.app/',
-        },
-        {
-            id: 5,
-            title: 'Site NextSolve',
-            image: '/webNext.png',
-            text: 'Site desenvolvido para empresa NextSolve',
-            href: 'https://nextsolve.vercel.app/',
-            tec: ['Next.js', 'Css Modules'],
-            github: 'https://github.com/WendelBonucci/Nextsolve-Studio-Vision/tree/main/src/app',
-            demo: 'https://nextsolve.vercel.app/',
-        },
-        {
-            id: 6,
-            title: 'Site NextSolve',
-            image: '/webNext.png',
-            text: 'Site desenvolvido para empresa NextSolve',
-            href: 'https://nextsolve.vercel.app/',
-            tec: ['Next.js', 'Css Modules'],
-            github: 'https://github.com/WendelBonucci/Nextsolve-Studio-Vision/tree/main/src/app',
-            demo: 'https://nextsolve.vercel.app/',
-        },
+        /*      {
+                 id: 4,
+                 title: 'Site NextSolve',
+                 image: '/webNext.png',
+                 text: 'Site desenvolvido para empresa NextSolve',
+                 href: 'https://nextsolve.vercel.app/',
+                 tec: ['Next.js', 'Css Modules'],
+                 github: 'https://github.com/WendelBonucci/Nextsolve-Studio-Vision/tree/main/src/app',
+                 demo: 'https://nextsolve.vercel.app/',
+             },
+             {
+                 id: 5,
+                 title: 'Site NextSolve',
+                 image: '/webNext.png',
+                 text: 'Site desenvolvido para empresa NextSolve',
+                 href: 'https://nextsolve.vercel.app/',
+                 tec: ['Next.js', 'Css Modules'],
+                 github: 'https://github.com/WendelBonucci/Nextsolve-Studio-Vision/tree/main/src/app',
+                 demo: 'https://nextsolve.vercel.app/',
+             },
+             {
+                 id: 6,
+                 title: 'Site NextSolve',
+                 image: '/webNext.png',
+                 text: 'Site desenvolvido para empresa NextSolve',
+                 href: 'https://nextsolve.vercel.app/',
+                 tec: ['Next.js', 'Css Modules'],
+                 github: 'https://github.com/WendelBonucci/Nextsolve-Studio-Vision/tree/main/src/app',
+                 demo: 'https://nextsolve.vercel.app/',
+             }, */
     ]
 
     return (
@@ -95,8 +95,7 @@ export default function Projects() {
                                     src={project.image}
                                     alt={project.title}
                                     fill
-                                    className={styles.projectImage}
-                                />
+                                    className={styles.projectImage} />
                                 <div className={styles.imageOverlay}></div>
                             </div>
 
@@ -109,13 +108,8 @@ export default function Projects() {
                                         <span key={index} className={styles.techTag}>{tech}</span>
                                     ))}
                                 </div>
-                            
-                                <button
-                                    className={styles.viewButton}
-                                    onClick={() => openProjectModal(project.id)}
-                                >
-                                    Ver Projeto
-                                </button>
+
+                                <button className={styles.viewButton} onClick={() => openProjectModal(project.id)}>Ver Projeto</button>
                             </div>
 
                             {openModal === project.id && (
@@ -125,14 +119,7 @@ export default function Projects() {
                                         onClick={closeModal}
                                     />
                                     <div className={styles.modal}>
-                                        <button
-                                            className={styles.closeButton}
-                                            onClick={closeModal}
-                                            aria-label="Fechar modal"
-                                        >
-                                            <FiX />
-                                        </button>
-
+                                        <button className={styles.closeButton} onClick={closeModal} aria-label="Fechar modal" > <FiX /></button>
                                         <h3 className={styles.modalTitle}>{project.title}</h3>
                                         <p className={styles.modalDescription}>{project.description}</p>
 
