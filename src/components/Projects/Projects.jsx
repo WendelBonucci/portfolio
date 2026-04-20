@@ -22,12 +22,12 @@ export default function Projects() {
         {
             id: 1,
             title: 'Site NextSolve',
-            image: '/webNext.png',
+            image: '/nextsolve.png',
             text: 'Site desenvolvido para empresa NextSolve',
-            href: 'https://nextsolve.vercel.app/',
+            href: 'https://nextsolve.com.br',
             tec: ['Next.js', 'Css Modules'],
-            github: 'https://github.com/WendelBonucci/Nextsolve-Studio-Vision/tree/main/src/app',
-            demo: 'https://nextsolve.vercel.app/',
+            github: 'https://github.com/Next-Solve-Studio/nextsolve-page',
+            demo: 'https://nextsolve.com.br/',
         },
         {
             id: 2,
@@ -59,26 +59,16 @@ export default function Projects() {
             github: 'https://github.com/Equipe-NextSolve/medalhas-brasil',
             demo: 'https://www.medalhasbrasil.com/',
         },
-        /*     {
-             id: 5,
-             title: 'Site NextSolve',
-             image: '/webNext.png',
-             text: 'Site desenvolvido para empresa NextSolve',
-             href: 'https://nextsolve.vercel.app/',
-             tec: ['Next.js', 'Css Modules'],
-             github: 'https://github.com/WendelBonucci/Nextsolve-Studio-Vision/tree/main/src/app',
-             demo: 'https://nextsolve.vercel.app/',
-         },
-         {
-             id: 6,
-             title: 'Site NextSolve',
-             image: '/webNext.png',
-             text: 'Site desenvolvido para empresa NextSolve',
-             href: 'https://nextsolve.vercel.app/',
-             tec: ['Next.js', 'Css Modules'],
-             github: 'https://github.com/WendelBonucci/Nextsolve-Studio-Vision/tree/main/src/app',
-             demo: 'https://nextsolve.vercel.app/',
-         }, */
+        {
+            id: 5,
+            title: 'Visiocorp',
+            image: '/visio.png',
+            text: 'Site desenvolvido para empresa NextSolve',
+            href: 'https://nextsolve.vercel.app/',
+            tec: ['Next.js', 'Css Modules'],
+            github: 'https://github.com/WendelBonucci/Nextsolve-Studio-Vision/tree/main/src/app',
+            demo: 'https://visio-corp.vercel.app/',
+        },
     ]
 
     return (
